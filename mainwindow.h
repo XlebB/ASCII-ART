@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QObject>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -18,8 +19,8 @@ public:
 private slots:
     void on_ecsport_clicked();
     void on_loadbutton_clicked();
-    void on_progressBar_valueChanged(int value);
-
+    void on_pushButton_clicked();
+    void on_pushButton_2_clicked();
 private:
     Ui::MainWindow *ui;
 };

@@ -2,12 +2,15 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>424</width>
-    <height>162</height>
+    <height>219</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,47 +22,35 @@
 background: #505050;
 }</string>
    </property>
-   <widget class="QProgressBar" name="progressBar">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>90</y>
-      <width>401</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QProgressBar {
-    text-align: center;
-	color:#FFFFFF;
-	background-color: #757575;
-	border: 1px solid grey;
-	 border-radius: 8px;
-	padding: 1px;
-}
-QProgressBar::chunk {
-    background-color: #F44336;
-	border: 1px solid grey;
-	 border-radius: 8px;
-	padding: 1px;
-}</string>
-    </property>
-    <property name="value">
-     <number>24</number>
-    </property>
-   </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>30</y>
       <width>401</width>
-      <height>51</height>
+      <height>41</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,0">
+     <property name="spacing">
+      <number>5</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QPushButton" name="loadbutton">
+       <property name="font">
+        <font>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
     background-color: #757575;
@@ -76,6 +67,30 @@ QProgressBar::chunk {
      </item>
      <item>
       <widget class="QPushButton" name="ecsport">
+       <property name="maximumSize">
+        <size>
+         <width>2000000</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="baseSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font/>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
         <string notr="true">QPushButton{
     background-color: #757575;
@@ -96,7 +111,7 @@ QProgressBar::chunk {
     <property name="geometry">
      <rect>
       <x>-23</x>
-      <y>140</y>
+      <y>120</y>
       <width>451</width>
       <height>31</height>
      </rect>
@@ -111,38 +126,122 @@ QProgressBar::chunk {
       <x>10</x>
       <y>10</y>
       <width>401</width>
-      <height>17</height>
+      <height>16</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #FFFFFF;</string>
     </property>
     <property name="text">
      <string>Путь:</string>
     </property>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <widget class="QLabel" name="finish">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>70</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
-      <width>401</width>
-      <height>21</height>
+      <y>150</y>
+      <width>171</width>
+      <height>26</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <property name="styleSheet">
+     <string notr="true">    background-color: #757575;
+	color: #FFFFFF;
+   border-style: outset;
+    padding: 1px;
+	border-radius: 8px;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>140</y>
+      <width>221</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QLabel" name="qwe">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">    background-color: #757575;
+	color: #FFFFFF;
+   border-style: outset;
+    padding: 1px;
+	border-radius: 8px;</string>
+       </property>
        <property name="text">
-        <string/>
+        <string>Изменить градиент</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLabel" name="qwer">
+      <widget class="QPushButton" name="pushButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">    background-color: #757575;
+	color: #FFFFFF;
+   border-style: outset;
+    padding: 1px;
+	border-radius: 8px;</string>
+       </property>
        <property name="text">
-        <string/>
+        <string>Установить стандартный</string>
        </property>
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>190</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+	color: #FFFFFF;
+</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;В разработке&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
    </widget>
   </widget>
  </widget>
