@@ -1,2 +1,2 @@
 # ASCII-ART
-School computer science project, simple converter bmp to ASCII ART on QT
+School computer science project, simple converter any photo to ASCII ART on QT
