@@ -33,7 +33,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-//char mass[13] = "@#S%?*+;;,..";
 
  void MainWindow::on_loadbutton_clicked()
  {
@@ -42,6 +41,7 @@ MainWindow::~MainWindow()
    QImage img(ipath);
    depthh = img.depth();
    qDebug() << ipath << "||" << depthh;
+   ui->finish->setText("Import");
  }
 
 
@@ -66,8 +66,7 @@ void MainWindow::on_ecsport_clicked()
          qDebug() << y << Qt::endl;
          for(int x=0; x<width; x++)
          {
-             int pixIdx = imgG.pixelIndex(x,y);
-             QRgb pixColor  = imgG.color(pixIdx);
+             QRgb pixColor  = imgG.pixel(x,y);
                 int R = qRed(pixColor);
                 int G = qGreen(pixColor);
                 int B = qBlue(pixColor);
@@ -87,17 +86,23 @@ void MainWindow::on_ecsport_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    std::string s = "";
-    for(int i=0; i<13; i++){
-        s = s + mass[i];
-    };
-    QString ss = QString::fromStdString(s);
-    //qDebug() << ss;
-    ui->lineEdit->setText(ss);
+    QString alphabet=ui->lineEdit->text();
+    std::string alpabett = alphabet.toStdString();
+    for (int i = 0; i < 13; i++) {
+            mass[i] = alpabett[i];
+        }
+    qDebug() << alphabet ;
 }
 
 
 void MainWindow::on_pushButton_clicked()
 {
+    std::string s = "";
+    char masss[13] = "@#S%?*+;;,..";
+    for(int i=0; i<13; i++){
+        s = s + masss[i];
+    };
+    QString ss = QString::fromStdString(s);
+    ui->lineEdit->setText(ss);
 }
 

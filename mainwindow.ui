@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>424</width>
-    <height>219</height>
+    <height>232</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -240,7 +240,7 @@ background: #505050;
 </string>
     </property>
     <property name="text">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;В разработке&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;12 символов для ввода&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
   </widget>
